@@ -16,30 +16,69 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kN5-Vr-5et">
-                                <rect key="frame" x="32" y="484" width="350" height="350"/>
-                                <color key="backgroundColor" systemColor="systemRedColor"/>
-                            </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Iou-bZ-h1N">
-                                <rect key="frame" x="32" y="86" width="350" height="350"/>
-                                <color key="backgroundColor" systemColor="systemTealColor"/>
-                            </view>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="33" translatesAutoresizingMaskIntoConstraints="NO" id="xrn-jN-V70">
+                                <rect key="frame" x="157" y="112" width="100" height="366"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Iou-bZ-h1N">
+                                        <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                                        <color key="backgroundColor" systemColor="systemRedColor"/>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gUI-Rv-Nyv">
+                                        <rect key="frame" x="0.0" y="133" width="100" height="100"/>
+                                        <color key="backgroundColor" systemColor="systemYellowColor"/>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5uh-1b-Iws">
+                                        <rect key="frame" x="0.0" y="266" width="100" height="100"/>
+                                        <color key="backgroundColor" systemColor="systemGreenColor"/>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="366" id="9ah-5e-IGP"/>
+                                    <constraint firstAttribute="width" constant="100" id="iZI-RC-Isj"/>
+                                </constraints>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dtw-Gn-5of">
+                                <rect key="frame" x="138.5" y="720" width="137" height="53"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="53" id="JME-8t-Er2"/>
+                                    <constraint firstAttribute="width" secondItem="dtw-Gn-5of" secondAttribute="height" multiplier="137:53" id="tzC-Pw-MdV"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain">
+                                    <backgroundConfiguration key="background">
+                                        <color key="backgroundColor" systemColor="linkColor"/>
+                                    </backgroundConfiguration>
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="START">
+                                            <attributes>
+                                                <font key="NSFont" size="31" name="Helvetica"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                    <color key="baseForegroundColor" systemColor="opaqueSeparatorColor"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="startButtonPress" destination="BYZ-38-t0r" eventType="touchUpInside" id="3LA-dy-v0a"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" systemColor="labelColor"/>
                         <constraints>
-                            <constraint firstItem="Iou-bZ-h1N" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="42" id="3Ic-xz-mlH"/>
-                            <constraint firstItem="Iou-bZ-h1N" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="32" id="9wL-6p-CP4"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="kN5-Vr-5et" secondAttribute="trailing" constant="32" id="EDj-Cm-Nn0"/>
-                            <constraint firstItem="Iou-bZ-h1N" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="KG5-cx-6mh"/>
-                            <constraint firstItem="kN5-Vr-5et" firstAttribute="top" secondItem="Iou-bZ-h1N" secondAttribute="bottom" constant="48" id="T74-MH-bqq"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="kN5-Vr-5et" secondAttribute="bottom" constant="28" id="XOb-oC-eZK"/>
-                            <constraint firstItem="kN5-Vr-5et" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="YZM-RC-VVn"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Iou-bZ-h1N" secondAttribute="trailing" constant="32" id="ZdE-9W-oFN"/>
-                            <constraint firstItem="kN5-Vr-5et" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="32" id="eHY-fa-8Vf"/>
-                            <constraint firstItem="Iou-bZ-h1N" firstAttribute="height" secondItem="kN5-Vr-5et" secondAttribute="height" id="pfO-Nd-7hP"/>
+                            <constraint firstItem="dtw-Gn-5of" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="46G-Bd-A5x"/>
+                            <constraint firstItem="xrn-jN-V70" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="LNu-vW-oWd"/>
+                            <constraint firstItem="xrn-jN-V70" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="68" id="Ox4-d8-hGQ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="dtw-Gn-5of" secondAttribute="bottom" constant="89" id="RBO-i4-b9h"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="dtw-Gn-5of" secondAttribute="trailing" id="Xr4-EE-0o2"/>
+                            <constraint firstItem="dtw-Gn-5of" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="qhV-TU-g26"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="greenLightView" destination="5uh-1b-Iws" id="ZKd-I3-1OM"/>
+                        <outlet property="redLightView" destination="Iou-bZ-h1N" id="C4X-pz-uqx"/>
+                        <outlet property="startButton" destination="dtw-Gn-5of" id="qew-lB-xix"/>
+                        <outlet property="yellowLightView" destination="gUI-Rv-Nyv" id="phV-c6-npA"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -47,14 +86,23 @@
         </scene>
     </scenes>
     <resources>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="linkColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="opaqueSeparatorColor">
+            <color red="0.77647058823529413" green="0.77647058823529413" blue="0.78431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemRedColor">
             <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
-        <systemColor name="systemTealColor">
-            <color red="0.18823529411764706" green="0.69019607843137254" blue="0.7803921568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        <systemColor name="systemYellowColor">
+            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
